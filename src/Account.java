@@ -74,19 +74,12 @@ public abstract class Account implements ITaxa{
     void printStatemant(int order) {
             ArrayList<Operation> operacoes = new ArrayList<Operation>(this.operations);
             switch (order) {
-                case 0:
-                    break;
-                case 1:
-                    Collections.sort(operacoes);
-                    break;
-                default:
-                    System.out.println("\nERRO! Algum Número deve ser digitado.\n");
-                    return;
+                case 0: break;
+                case 1: Collections.sort(operacoes); break;
+                default: System.out.println("\nERRO! Algum Número deve ser digitado.\n"); return;
             }
 
-            for (Operation operacao : operacoes) {
-                System.out.print(operacao.toString());
-            }
+            for (Operation operacao : operacoes) { System.out.print(operacao.toString()); }
     }
 
     public void printFeeStatement(){
