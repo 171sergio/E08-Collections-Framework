@@ -80,7 +80,7 @@ public abstract class Account implements ITaxa{
                     Collections.sort(operacoes);
                     break;
                 default:
-                    System.out.println("Erro. Digite 0 para ordenação por data e 1 para por tipo");
+                    System.out.println("\nERRO! Algum Número deve ser digitado.\n");
                     return;
             }
 

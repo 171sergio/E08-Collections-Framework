@@ -15,28 +15,19 @@ public class Main {
         contapj.withdraw(10);
         contapj.withdraw(1);
         contapj.withdraw(900);
-        contapj.printFeeStatement();
 
-        System.out.println("ContaPF");
-        contapf.deposit(10000);
-        contapf.withdraw(10);
-        contapf.withdraw(1);
-        contapf.withdraw(900);
-        contapf.printFeeStatement();
-
-        System.out.println("Conta Poupança");
-        contapoup.deposit(10000);
-        contapoup.withdraw(10);
-        contapoup.withdraw(1);
-        contapoup.withdraw(900);
-        contapoup.printFeeStatement();
-
-        System.out.println("Conta Universitária");
-        contauni.deposit(10000);
-        contauni.withdraw(10);
-        contauni.withdraw(1);
-        contauni.withdraw(900);
-        contauni.printFeeStatement();
-
+        try {
+            Thread.sleep(5000); // pausa de 5 segundos
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        contapj.deposit(20);
+        contapj.withdraw(20);
+        System.out.println("Ordenado por tipo de operação");
+        contapj.printStatemant(1);
+        System.out.println("Ordenado por data");
+        contapj.printStatemant(0);
+        System.out.println("Exemplo de caso de flag inválido");
+        contapj.printStatemant(10);
     }
 }

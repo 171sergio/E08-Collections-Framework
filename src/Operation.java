@@ -19,7 +19,7 @@ public abstract class Operation implements ITaxa, Comparable<Operation>{
     public String toString(){
         String opStr;
 
-        opStr = "Data : " + getDate() + "Tipo : " + getType() + "Valor : " + getAmount();
+        opStr = "Data : " + getDate() + " Tipo : " + getType() + " Valor : " + getAmount() + "\n";
 
         return opStr;
     }

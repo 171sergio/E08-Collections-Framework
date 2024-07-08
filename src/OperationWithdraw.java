@@ -4,11 +4,6 @@ public class OperationWithdraw extends Operation implements ITaxa{
     }
 
     @Override
-    public String toString() {
-        return "Data : " + getDate() + " Tipo : " + getType() + " Valor : " + getAmount();
-    }
-
-    @Override
     public double calculateTax() {
         return 0.05;
     }
